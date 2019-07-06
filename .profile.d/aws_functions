@@ -1,0 +1,29 @@
+function instance_id() {
+  aws --profile $2 ec2 describe-instances --filters "Name=network-interface.addresses.private-ip-address,Values=$1" | grep -iw 'InstanceId' | cut -d'"' -f4
+}
+
+function start_instance() {
+  PROFILE=${2:-staging}
+  INSTANCE_ID=$(instance_id $1 $PROFILE)
+  aws --profile $PROFILE ec2 start-instances --instance-ids $INSTANCE_ID
+}
+
+function stop_instance() {
+  PROFILE=${2:-staging}
+  INSTANCE_ID=$(instance_id $1 $PROFILE)
+  aws --profile $PROFILE ec2 stop-instances --instance-ids $INSTANCE_ID
+}
+
+function reboot_instance() {
+  PROFILE=${2:-staging}
+  INSTANCE_ID=$(instance_id $1 $PROFILE)
+  aws --profile $PROFILE ec2 reboot-instances --instance-ids $INSTANCE_ID
+}
+
+function list_queue_details() {
+  for QUEUE_URL in $(aws --region 'us-east-1' sqs list-queues --output text | awk '{print $2}')
+  do
+    echo "Queue URL -> $QUEUE_URL\n"
+    aws --region 'us-east-1' sqs get-queue-attributes --queue-url $QUEUE_URL --attribute-names "ApproximateNumberOfMessagesNotVisible" "ApproximateNumberOfMessages" --output text
+  done
+}

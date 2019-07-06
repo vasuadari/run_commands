@@ -1,0 +1,6 @@
+alias pvpn="sudo /Users/vasu/.ovpn/vpn.sh start production"
+alias svpn="sudo /Users/vasu/.ovpn/vpn.sh start staging"
+alias savpn="sudo /Users/vasu/.ovpn/vpn.sh stop_all"
+alias lvpn="sudo /Users/vasu/.ovpn/vpn.sh list"
+alias p=". /Users/vasu/.bash_production"
+alias s=". /Users/vasu/.bash_staging"

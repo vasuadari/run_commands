@@ -1,0 +1,44 @@
+alias vpn="sudo $HOME/.ovpn/vpn.sh"
+
+RED="\[$(tput setaf 1)\]"
+GREEN="\033[1;32m"
+RESET="\[$(tput sgr0)\]"
+
+git_branch() {
+  [ -d .git ] && echo "(`git rev-parse --abbrev-ref HEAD 2> /dev/null`)"
+}
+
+# export PS1="\t ${RED}\w ${GREEN}\$(git_branch)\$ ${RESET}"
+
+# export PS1="\t ${RED}\w ${GREEN} ${RESET}"
+
+server() {
+  export PS1=server-$PS1
+}
+
+echo "Loading bash profiles"
+
+for i in $(ls ~/.profile.d)
+do
+  . ~/.profile.d/$i
+done
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+if [[ $ITERM_PROFILE == "production" ]]
+then
+  . $HOME/.bash_production
+fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+
