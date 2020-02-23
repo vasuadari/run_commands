@@ -5,11 +5,29 @@ My personalized rc files.
 # Installation
 
 ```
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+# Install HomeBrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install clipboard history tool
+brew cask install clipy
+
+# Install latest Vim
+brew install vim
+
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install asdf version manager
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.2
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+cd ~/.asdf
+git checkout "$(git describe --abbrev=0 --tags)"
+
 mkdir -p $HOME/github
 git clone https://github.com/vasuadari/.zshrc.git $HOME/github
 cp -r $HOME/github/.profile.d $HOME/

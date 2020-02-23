@@ -1,0 +1,9 @@
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+if [[ $ITERM_PROFILE == "production" ]]
+then
+  . $HOME/.bash_production
+fi
+
+alias vpn="sudo $HOME/.ovpn/vpn.sh"

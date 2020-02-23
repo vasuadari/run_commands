@@ -102,17 +102,3 @@ for i in $(ls ~/.profile.d)
 do
   . ~/.profile.d/$i
 done
-
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
-
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
-if [[ $ITERM_PROFILE == "production" ]]
-then
-  . $HOME/.bash_production
-fi
-
-alias vpn="sudo $HOME/.ovpn/vpn.sh"
