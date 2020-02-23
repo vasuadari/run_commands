@@ -1,6 +1,6 @@
-# .zshrc
+# Run Commands
 
-My personalized .zshrc
+My personalized rc files.
 
 # Installation
 
