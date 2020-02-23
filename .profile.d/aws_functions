@@ -20,6 +20,12 @@ function reboot_instance() {
   aws --profile $PROFILE ec2 reboot-instances --instance-ids $INSTANCE_ID
 }
 
+function describe_instance() {
+  PROFILE=${2:-staging}
+  INSTANCE_ID=$(instance_id $1 $PROFILE)
+  aws --profile $PROFILE ec2 describe-instances --instance-ids $INSTANCE_ID
+}
+
 function list_queue_details() {
   for QUEUE_URL in $(aws --region 'us-east-1' sqs list-queues --output text | awk '{print $2}')
   do
