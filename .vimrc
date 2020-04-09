@@ -56,6 +56,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'Align'
 Plugin 'SQLUtilities'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -130,7 +132,7 @@ let ruby_space_errors = 1
 set clipboard=unnamed
 
 " ag.vim
-nnoremap <Leader>g :Ag
+nnoremap <Leader>g :Ag 
 
 " yggdroot/indentline
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -140,9 +142,23 @@ nnoremap <Leader>g :Ag
 map mt :!mix test %<CR>
 
 " scrooloose/nerdtree
-map <leader>r :NERDTreeFind<cr>
+" Find a file in the nerd tree
+map <Leader>r :NERDTreeFind<CR>
 
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 " SQLUtilities
 vmap <silent>sf <Plug>SQLU_Formatter<CR>
+
+set belloff=all
+
+" xolox/vim-notes
+" Opens up new note
+map <leader>n/ :Note<CR>
+" Start a new note with selected text
+map <Leader>ns/ :NoteFromSelectedText<CR>
+" edit existing note
+nnoremap <Leader>n :Note 
+" delete existing note
+nnoremap <Leader>nd :DeleteNote 
+nnoremap <Leader>ns :SearchNotes 
