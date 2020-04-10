@@ -154,7 +154,7 @@ set belloff=all
 
 " xolox/vim-notes
 " Opens up new note
-map <leader>n/ :Note<CR>
+map <Leader>n/ :Note<CR>
 " Start a new note with selected text
 map <Leader>ns/ :NoteFromSelectedText<CR>
 " edit existing note
@@ -162,3 +162,7 @@ nnoremap <Leader>n :Note
 " delete existing note
 nnoremap <Leader>nd :DeleteNote 
 nnoremap <Leader>ns :SearchNotes 
+
+" rust shortcuts
+map rcb :!cargo build<CR>
+map rcr :!cargo run<CR>
