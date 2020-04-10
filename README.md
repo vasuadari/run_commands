@@ -16,6 +16,8 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 # Install HomeBrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew install coreutils
+
 # Install clipboard history tool
 brew cask install clipy
 

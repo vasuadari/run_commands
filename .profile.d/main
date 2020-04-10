@@ -7,3 +7,5 @@ then
 fi
 
 alias vpn="sudo $HOME/.ovpn/vpn.sh"
+export EDITOR=vim
+export PATH="/usr/local/opt/curl/bin:$PATH"

@@ -102,3 +102,4 @@ for i in $(ls ~/.profile.d)
 do
   . ~/.profile.d/$i
 done
+[[ -f /Users/vasu/.sentinel/current/bin/sentinel ]] && eval "$(/Users/vasu/.sentinel/current/bin/sentinel init -)"

@@ -1,2 +1,3 @@
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+. ~/.asdf/plugins/java/set-java-home.sh
