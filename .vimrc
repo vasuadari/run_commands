@@ -4,6 +4,9 @@ filetype off                  " required
 " Leader
 let mapleader = "-"
 
+" LocalLeader
+let maplocalleader = "\\"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -45,7 +48,7 @@ Plugin 'lokaltog/vim-powerline'
 Plugin 'elzair/vim-line-numbers'
 Plugin 'thaerkh/vim-workspace'
 Plugin 'mhinz/vim-mix-format'
-Plugin 'chiel92/vim-autoformat'
+" Plugin 'chiel92/vim-autoformat'
 Plugin 'rking/ag.vim'
 " Plugin 'yggdroot/indentline'
 Plugin 'tpope/vim-surround'
@@ -58,6 +61,8 @@ Plugin 'Align'
 Plugin 'SQLUtilities'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-speeddating'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -109,7 +114,7 @@ nnoremap <Leader>t/ :Tags<CR>
 nnoremap <Leader>:/ :History:<CR>
 
 " Markdown
-let vim_markdown_preview_hotkey='<C-m>'
+" let vim_markdown_preview_hotkey='<C-m>'
 
 " vim-workspace
 " nnoremap <leader>s :ToggleWorkspace<CR>
@@ -166,3 +171,6 @@ nnoremap <Leader>ns :SearchNotes
 " rust shortcuts
 map rcb :!cargo build<CR>
 map rcr :!cargo run<CR>
+
+" bundle exec rspec
+map ber :!bundle exec rspec %<CR>
