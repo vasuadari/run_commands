@@ -36,12 +36,13 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
+Plugin 'slashmili/alchemist.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'chriskempson/base16-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'L9'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'roman/golden-ratio'
 Plugin 'lokaltog/vim-powerline'
@@ -63,6 +64,9 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'smith/javascriptlint.vim'
+Plugin 'splattael/rufo-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -174,3 +178,4 @@ map rcr :!cargo run<CR>
 
 " bundle exec rspec
 map ber :!bundle exec rspec %<CR>
+set relativenumber

@@ -29,13 +29,13 @@ scrolling:
 # Font configuration
 font:
   normal:
-    family: monospace
+    family: menlo
     style: Regular
   bold:
-    family: monospace
+    family: menlo
     style: Bold
   italic:
-    family: monospace
+    family: menlo
     style: Italic
   size: 16.0
   offset:
