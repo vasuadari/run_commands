@@ -24,6 +24,8 @@ brew cask install clipy
 # Install latest Vim
 brew install vim
 
+brew install ripgrep
+
 # Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
