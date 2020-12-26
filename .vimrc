@@ -20,23 +20,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
-Plugin 'slashmili/alchemist.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'chriskempson/base16-vim'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -48,10 +35,7 @@ Plugin 'roman/golden-ratio'
 Plugin 'lokaltog/vim-powerline'
 Plugin 'elzair/vim-line-numbers'
 Plugin 'thaerkh/vim-workspace'
-Plugin 'mhinz/vim-mix-format'
-" Plugin 'chiel92/vim-autoformat'
-Plugin 'rking/ag.vim'
-" Plugin 'yggdroot/indentline'
+Plugin 'jremmen/vim-ripgrep'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'ReplaceWithRegister'
@@ -67,6 +51,8 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'smith/javascriptlint.vim'
 Plugin 'splattael/rufo-vim'
+Plugin 'jreybert/vimagit'
+Plugin 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -111,20 +97,10 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 " FZF plugin confs
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 nnoremap <Leader>f/ :Files<CR>
 nnoremap <Leader>b/ :BLines<CR>
 nnoremap <Leader>t/ :Tags<CR>
 nnoremap <Leader>:/ :History:<CR>
-
-" Markdown
-" let vim_markdown_preview_hotkey='<C-m>'
-
-" vim-workspace
-" nnoremap <leader>s :ToggleWorkspace<CR>
-" let g:workspace_session_name = 'Session.vim'
-" let g:workspace_session_directory = $HOME . '/.vim/sessions/'
-" let g:workspace_autosave_always = 1
 
 " vim-fugitive
 map gb :Gblame<CR>
@@ -140,8 +116,8 @@ let ruby_space_errors = 1
 " Use system clipboard as default register
 set clipboard=unnamed
 
-" ag.vim
-nnoremap <Leader>g :Ag 
+" chiel92/vim-autoformat
+nnoremap <Leader>g :Rg 
 
 " yggdroot/indentline
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -178,4 +154,5 @@ map rcr :!cargo run<CR>
 
 " bundle exec rspec
 map ber :!bundle exec rspec %<CR>
-set relativenumber
+
+set nocursorline
