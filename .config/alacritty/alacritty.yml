@@ -30,12 +30,15 @@ scrolling:
 font:
   normal:
     family: menlo
+      # family: creep
     style: Regular
   bold:
-    family: menlo
+    family: creep
+      #family: menlo
     style: Bold
   italic:
-    family: menlo
+    family: creep
+      #family: menlo
     style: Italic
   size: 16.0
   offset:
