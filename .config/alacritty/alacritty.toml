@@ -1,0 +1,107 @@
+import = ["/Users/vasu/gen/alacritty/Themer.toml"]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.footer_bar]
+background = "#c5c8c6"
+foreground = "#1d1f21"
+
+[colors.vi_mode_cursor]
+cursor = "0x99faf2"
+text = "0xc0e17d"
+
+[cursor]
+style = "Beam"
+unfoucsed_hollow = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16.0
+
+[font.bold]
+family = "Roboto Mono for Powerline"
+style = "Bold"
+
+[font.debug]
+persistent_logging = false
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Roboto Mono Thin for Powerline"
+style = "Italic"
+
+[font.normal]
+family = "Roboto Mono for Powerline"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[hints.enabled]]
+command = "open"
+hyperlinks = true
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "F"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "B"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001B[1;5A"
+key = "Up"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001B[1;5B"
+key = "Down"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+blur = true
+decorations = "none"
+dynamic_title = true
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 150
+lines = 40
+
+[window.padding]
+x = 10
+y = 10
