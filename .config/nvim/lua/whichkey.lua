@@ -1,12 +1,12 @@
 local wk = require("which-key")
-local rest = require("rest-nvim")
+local fzf = require("fzf-lua")
 
 wk.add({
-  { "<C-n>", ":NERDTreeToggle<CR>" },
-  { "<leader>r", ":NERDTreeFind<CR>" },
+  { "<leader>nn", ":NvimTreeOpen<CR>" },
+  { "<leader>nf", ":NvimTreeFindFile<CR>" },
   { "<leader>l", ":Lazy<CR>" },
-  { "<leader>f/", ":lua require('fzf-lua').files()<CR>" },
-  { "<leader>g/", ":lua require('fzf-lua').live_grep()<CR>" },
+  { "<leader>f/", function () fzf.files() end },
+  { "<leader>g/", function () fzf.live_grep() end },
   { "<leader>b/", ":BLines<CR>" },
   { "<leader>t/", ":Tags<CR>" },
   { "<leader>:/", ":History:<CR>" },
@@ -19,9 +19,10 @@ wk.add({
   { "<leader>g", ":Rg" },
 
   -- vim-test
-  { "<silent> <leader>t", ":TestNearest<CR>" },
-  { "<silent> <leader>T", ":TestFile<CR>" },
-  { "<silent> <leader>a", ":TestSuite<CR>" },
-  { "<silent> <leader>tl", ":TestLast<CR>" },
-  { "<silent> <leader>tg", ":TestVisit<CR>" },
+  { "<leader>tt", ":TestNearest<CR>" },
+  { "<leader>tT", ":TestFile<CR>" },
+  { "<leader>ta", ":TestSuite<CR>" },
+  { "<leader>tl", ":TestLast<CR>" },
+  { "<leader>tg", ":TestVisit<CR>" },
 })
+

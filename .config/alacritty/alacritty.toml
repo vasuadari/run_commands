@@ -13,7 +13,6 @@ text = "0xc0e17d"
 
 [cursor]
 style = "Beam"
-unfoucsed_hollow = true
 
 [env]
 TERM = "xterm-256color"
@@ -22,22 +21,19 @@ TERM = "xterm-256color"
 size = 16.0
 
 [font.bold]
-family = "Roboto Mono for Powerline"
+family = "Hack Nerd Font"
 style = "Bold"
-
-[font.debug]
-persistent_logging = false
 
 [font.glyph_offset]
 x = 0
 y = 0
 
 [font.italic]
-family = "Roboto Mono Thin for Powerline"
+family = "Hack Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Roboto Mono for Powerline"
+family = "Hack Nerd Font"
 style = "Regular"
 
 [font.offset]

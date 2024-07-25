@@ -1,6 +1,6 @@
 local opt = vim.opt
+local g = vim.g
 
-opt.termguicolors = true
 opt.clipboard = "unnamedplus"
 opt.ttyfast = true
 opt.cursorline = true
@@ -17,3 +17,4 @@ opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.background = dark
 opt.syntax = "on"
+g.mix_format_on_save = 1
