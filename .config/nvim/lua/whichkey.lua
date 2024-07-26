@@ -7,6 +7,8 @@ wk.add({
   { "<leader>l", ":Lazy<CR>" },
   { "<leader>f/", function () fzf.files() end },
   { "<leader>g/", function () fzf.live_grep() end },
+  { "<leader>fcs", function () fzf.colorschemes() end },
+  { "<leader>fas", function () fzf.awesome_colorschemes() end },
   { "<leader>b/", ":BLines<CR>" },
   { "<leader>t/", ":Tags<CR>" },
   { "<leader>:/", ":History:<CR>" },

@@ -20,16 +20,10 @@ return {
 --  'vim-airline/vim-airline-themes',
   -- 'terryma/vim-multiple-cursors',
   'vimwiki/vimwiki',
-  'neovim/nvim-lspconfig',
   'honza/vim-snippets',
   'marko-cerovac/material.nvim',
   'wellle/tmux-complete.vim',
   'jreybert/vimagit',
-  {
-    "elixir-tools/elixir-tools.nvim",
-    tag = "stable",
-    requires = { "nvim-lua/plenary.nvim" }
-  },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
