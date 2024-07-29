@@ -2,7 +2,7 @@ local wk = require("which-key")
 local fzf = require("fzf-lua")
 
 wk.add({
-  { "<leader>nn", ":NvimTreeOpen<CR>" },
+  { "<leader>nt", ":NvimTreeOpen<CR>" },
   { "<leader>nf", ":NvimTreeFindFile<CR>" },
   { "<leader>l", ":Lazy<CR>" },
   { "<leader>f/", function () fzf.files() end },

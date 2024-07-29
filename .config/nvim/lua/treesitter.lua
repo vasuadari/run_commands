@@ -3,7 +3,7 @@ treesitter.setup {
   -- parser_install_dir = "/Users/vasu/src",
 
   -- A list of parser names, or "all"
-  ensure_installed = { "c", "lua", "rust", "elixir", "http", "json", "vim", "terraform", "jsonnet", "nix", "vimdoc" },
+  ensure_installed = { "c", "lua", "rust", "elixir", "http", "json", "vim", "terraform", "jsonnet", "nix", "vimdoc", "norg" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
