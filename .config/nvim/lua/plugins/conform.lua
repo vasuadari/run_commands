@@ -24,7 +24,6 @@ return {
       lua = { 'stylua' },
       elixir = { 'mix' },
       json = { 'jq' }
-
     },
   },
 }

@@ -44,9 +44,9 @@ return {
       },
     })
 
-    --    lspconfig.elixirls.setup {
-    --      cmd = { '/Users/vasu/.elixir-ls/release/language_server.sh' };
-    --    }
+    lspconfig.elixirls.setup {
+      cmd = { '/Users/vasu/.elixir-ls/release/language_server.sh' },
+    }
 
     lspconfig.lua_ls.setup {}
   end
