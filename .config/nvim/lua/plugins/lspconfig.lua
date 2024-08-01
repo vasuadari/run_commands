@@ -2,7 +2,7 @@ return {
   'neovim/nvim-lspconfig',
   on_init = function(client)
     local path = client.workspace_folders[1].name
-    if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+    if vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc') then
       return
     end
 
@@ -44,10 +44,10 @@ return {
       },
     })
 
-    lspconfig.elixirls.setup {
-      cmd = { '/Users/vasu/.elixir-ls/release/language_server.sh' };
-    }
+    --    lspconfig.elixirls.setup {
+    --      cmd = { '/Users/vasu/.elixir-ls/release/language_server.sh' };
+    --    }
 
-    lspconfig.lua_ls.setup{}
+    lspconfig.lua_ls.setup {}
   end
 }

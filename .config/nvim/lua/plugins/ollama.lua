@@ -3,9 +3,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
-  config = function()
-    require('ollama').setup {
-      model = 'llama3.1'
-    }
-  end,
+  opts = {
+    model = 'llama3.1'
+  },
 }
