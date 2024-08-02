@@ -1,4 +1,4 @@
 return {
   'neoclide/coc.nvim',
-  build = 'yarn install && yarn prepack'
+  build = 'yarn install && yarn add prepack && yarn prepack'
 }
