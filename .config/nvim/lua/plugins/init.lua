@@ -5,7 +5,6 @@ return {
   'jremmen/vim-ripgrep',
   'tpope/vim-fugitive',
   'tpope/vim-surround',
-  'tpope/vim-commentary',
   'mhinz/vim-mix-format',
   'stephpy/vim-yaml',
   'pedrohdz/vim-yaml-folds',
@@ -16,8 +15,8 @@ return {
   'ap/vim-css-color',
   'metakirby5/codi.vim',
   'vim-test/vim-test',
---  'vim-airline/vim-airline',
---  'vim-airline/vim-airline-themes',
+  --  'vim-airline/vim-airline',
+  --  'vim-airline/vim-airline-themes',
   -- 'terryma/vim-multiple-cursors',
   'vimwiki/vimwiki',
   'honza/vim-snippets',
@@ -43,4 +42,3 @@ return {
     },
   },
 }
-
