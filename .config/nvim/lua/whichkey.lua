@@ -1,5 +1,6 @@
 local wk = require("which-key")
 local fzf = require("fzf-lua")
+local telescope = require("telescope")
 
 wk.add({
   { "<leader>nt",  ":NvimTreeOpen<CR>" },
@@ -26,5 +27,6 @@ wk.add({
   { "<leader>ta",  ":TestSuite<CR>" },
   { "<leader>tl",  ":TestLast<CR>" },
   { "<leader>tg",  ":TestVisit<CR>" },
-  { "<leader>ngt", ":Neorg journal today<CR>" }
+  { "<leader>ngt", ":Neorg journal today<CR>" },
+  { "<leader>ts",  function() telescope.extensions.rest.select_env() end }
 })
