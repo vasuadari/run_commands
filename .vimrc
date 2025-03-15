@@ -23,8 +23,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree'
-Plugin 'elixir-lang/vim-elixir'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'elixir-lang/vim-elixir'
 Plugin 'chriskempson/base16-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -117,7 +117,7 @@ let ruby_space_errors = 1
 set clipboard=unnamed
 
 " chiel92/vim-autoformat
-nnoremap <Leader>g :Rg 
+nnoremap <Leader>g :Rg
 
 " yggdroot/indentline
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -132,6 +132,8 @@ map <Leader>r :NERDTreeFind<CR>
 
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+autocmd BufWinLeave * !MixFormat %:p
+
 " SQLUtilities
 vmap <silent>sf <Plug>SQLU_Formatter<CR>
 
@@ -143,10 +145,10 @@ map <Leader>n/ :Note<CR>
 " Start a new note with selected text
 map <Leader>ns/ :NoteFromSelectedText<CR>
 " edit existing note
-nnoremap <Leader>n :Note 
+nnoremap <Leader>n :Note
 " delete existing note
-nnoremap <Leader>nd :DeleteNote 
-nnoremap <Leader>ns :SearchNotes 
+nnoremap <Leader>nd :DeleteNote
+nnoremap <Leader>ns :SearchNotes
 
 " rust shortcuts
 map rcb :!cargo build<CR>
@@ -156,3 +158,4 @@ map rcr :!cargo run<CR>
 map ber :!bundle exec rspec %<CR>
 
 set nocursorline
+

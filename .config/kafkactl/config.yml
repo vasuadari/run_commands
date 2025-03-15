@@ -1,0 +1,13 @@
+contexts:
+  default:
+    brokers:
+    - 127.0.0.1:9092
+  immortal:
+    brokers:
+    - b-1.stagingkafka.b6m0v6.c4.kafka.ap-south-1.amazonaws.com:9092
+  production:
+    brokers:
+    - b-1.productionkafka.cr8ul7.c3.kafka.ap-south-1.amazonaws.com:9092
+    - b-2.productionkafka.cr8ul7.c3.kafka.ap-south-1.amazonaws.com:9092
+    - b-3.productionkafka.cr8ul7.c3.kafka.ap-south-1.amazonaws.com:9092
+current-context: production
