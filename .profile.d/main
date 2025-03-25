@@ -9,3 +9,10 @@ fi
 alias vpn="sudo $HOME/.ovpn/vpn.sh"
 export EDITOR=vim
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/opt/openvpn/sbin:$PATH"
+export PATH=/opt/homebrew/Cellar/ripgrep/13.0.0/bin:$PATH
+
+function s() {
+  exec $@
+}

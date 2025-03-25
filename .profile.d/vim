@@ -1,0 +1,1 @@
+export PATH=/opt/homebrew/Cellar/vim/8.2.4400/bin:$PATH

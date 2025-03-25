@@ -1,0 +1,13 @@
+function erlang24 {
+  export PATH=/opt/homebrew/opt/erlang@24/bin:$PATH
+}
+
+function erlang25 {
+  export PATH=/opt/homebrew/Cellar/erlang@25/*/bin:$PATH
+}
+
+function erlang26 {
+  export PATH=/opt/homebrew/Cellar/erlang@26/bin:$PATH
+}
+
+export ERL_AFLAGS="-kernel shell_history enabled"

@@ -1,0 +1,16 @@
+#! vim: set ft=zsh:
+function dstop() {
+  search=$1
+  for i in $(docker ps | grep "$search" | cut -d ' ' -f 1)
+  do
+    docker stop $i
+  done
+}
+
+function dstart() {
+  search=$1
+  for i in $(docker ps -a | grep "$search" | cut -d ' ' -f 1)
+  do
+    docker start $i
+  done
+}
