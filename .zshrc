@@ -72,10 +72,12 @@ export PATH="/opt/homebrew/opt/mysql-client@5.7/bin:$PATH"
 eval "$(direnv hook zsh)"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
-eval $(thefuck --alias)
 export DIRENV_LOG_FORMAT=""
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"
 
-source /Users/vasu/.config/broot/launcher/bash/br
+# source /Users/vasu/.config/broot/launcher/bash/br
 export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 export ELS_INSTALL_PREFIX="/Users/vasu/.elixir-ls/release"
+
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
