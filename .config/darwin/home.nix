@@ -33,39 +33,39 @@
     ];
     file = {
       ".profile.d" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.profile.d";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.profile.d";
       };
 
       ".zshrc" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.zshrc";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.zshrc";
       };
 
       ".config/alacritty" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/alacritty";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.config/alacritty";
       };
 
       ".config/nvim" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/nvim";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.config/nvim";
       };
 
       ".tmux" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.tmux";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.tmux";
       };
 
       ".tmux.conf" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.tmux.conf";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.tmux.conf";
       };
 
       ".tmux.conf.local" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.tmux.conf.local";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.tmux.conf.local";
       };
 
       ".hammerspoon" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.hammerspoon";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/.hammerspoon";
       };
 
       ".config/dnsmasq.conf" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/dnsmasq.conf";
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu/.run_commands/dnsmasq.conf";
         force = true;
       };
 

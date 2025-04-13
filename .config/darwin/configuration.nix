@@ -2,8 +2,8 @@
 
 {
   users.users.vasu = {
-    name = "vasu.adari";
-    home = "/Users/vasu.adari";
+    name = builtins.getEnv "USER";
+    home = "/Users/${name}";
   };
 
 
@@ -33,13 +33,13 @@
   environment.launchDaemons.dnsmasq.enable = true;
 
   launchd.daemons.dnsmasq = {
-    command = "/opt/homebrew/sbin/dnsmasq --conf-file=/Users/vasu.adari/.config/dnsmasq.conf";
+    command = "/opt/homebrew/sbin/dnsmasq --conf-file=/Users/vasu/.config/dnsmasq.conf";
     serviceConfig = {
       KeepAlive = true;
     };
   };
 
   launchd.daemons.colima = {
-    command = "/etc/profiles/per-user/vasu.adari/bin/colima start";
+    command = "/etc/profiles/per-user/vasu/bin/colima start";
   };
 }

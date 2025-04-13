@@ -20,11 +20,11 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+    username = "vasu";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, darwin, nix-homebrew, homebrew-core, homebrew-cask, ... }:
+  outputs = inputs@{ self, nixpkgs, username, home-manager, darwin, nix-homebrew, homebrew-core, homebrew-cask, ... }:
   let
-    username = "vasu.adari";
     system = "aarch64-darwin";
     nixpkgsConfig = { config.allowUnfree = true; };
   in
