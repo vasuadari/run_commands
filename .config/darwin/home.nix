@@ -40,12 +40,8 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.zshrc";
       };
 
-      ".config/alacritty" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/alacritty";
-      };
-
-      ".config/nvim" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/nvim";
+      ".config" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config";
       };
 
       ".tmux" = {
@@ -64,10 +60,9 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.hammerspoon";
       };
 
-      ".config/dnsmasq.conf" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/dnsmasq.conf";
-        force = true;
-      };
+      # ".config/dnsmasq.conf" = {
+      #   source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/dnsmasq.conf";
+      # };
 
       # # Building this configuration will create a copy of 'dotfiles/screenrc' in
       # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -83,11 +78,11 @@
   };
 
   programs = {
-    direnv = {
-      enable = true;
-      enableBashIntegration = true; # see note on other shells below
-      nix-direnv.enable = true;
-    };
+    # direnv = {
+    #   enable = true;
+    #   enableBashIntegration = true; # see note on other shells below
+    #   nix-direnv.enable = true;
+    # };
 
     zsh = {
       enable = true;

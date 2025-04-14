@@ -42,7 +42,7 @@
           nix-homebrew = {
             enable = true;
 
-            user = username;
+            user = "vasu.adari";
 
             taps = {
               "homebrew/homebrew-core" = homebrew-core;
