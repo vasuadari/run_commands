@@ -79,6 +79,7 @@
             "numi"
             "tailscale"
             "firefox"
+            "notion"
           ];
         }
 
