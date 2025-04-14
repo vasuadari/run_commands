@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  users.users.vasu = {
+  users.users."vasu.adari" = {
     name = "vasu.adari";
     home = "/Users/vasu.adari";
   };
