@@ -60,9 +60,9 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.hammerspoon";
       };
 
-      # ".config/dnsmasq.conf" = {
-      #   source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/dnsmasq.conf";
-      # };
+      ".config/dnsmasq.conf" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/dnsmasq.conf";
+      };
 
       # # Building this configuration will create a copy of 'dotfiles/screenrc' in
       # # the Nix store. Activating the configuration will then make '~/.screenrc' a
