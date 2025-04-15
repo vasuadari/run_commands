@@ -42,7 +42,7 @@
       shellHook = ''
         if [ ! -f /run/current-system/sw ]; then
           echo "👉 Running nix-darwin switch..."
-          nix run nix-darwin -- switch --flake ${self}
+          ${inputs.darwin.packages.${system}.default}/bin/darwin-rebuild switch --flake ${self.outPath}
         fi
       '';
     };
