@@ -2,8 +2,6 @@
 
 {
   home = {
-    username = "vasu.adari";
-    homeDirectory = "/Users/vasu.adari";
     stateVersion = "24.11"; # Please read the comment before changing.
     packages = with pkgs; [
       git

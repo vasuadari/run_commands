@@ -24,12 +24,30 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, darwin, nix-homebrew, homebrew-core, homebrew-cask, ... }:
   let
-    username = "vasu.adari";
+    machine = "SB-324";
     system = "aarch64-darwin";
+    username = "vasu.adari";
     nixpkgsConfig = { config.allowUnfree = true; };
+    pkgs = import nixpkgs {
+      inherit system;
+    };
   in
   {
-    darwinConfigurations.SB-235 = darwin.lib.darwinSystem {
+    devShells.${system}.default = pkgs.mkShell {
+      packages = with pkgs; [
+        git
+        jq
+      ];
+
+      shellHook = ''
+        if [ ! -f /run/current-system/sw ]; then
+          echo "👉 Running nix-darwin switch..."
+          nix run nix-darwin -- switch --flake ${self}
+        fi
+      '';
+    };
+
+    darwinConfigurations.${machine} = darwin.lib.darwinSystem {
       inherit system;
 
       specialArgs = { inherit inputs; };
@@ -88,7 +106,7 @@
           nixpkgs = nixpkgsConfig;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users."vasu.adari" = import ./home.nix;
+          home-manager.users.vasuadari = import ./home.nix;
         }
       ];
     };
