@@ -40,8 +40,20 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.zshrc";
       };
 
-      ".config" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config";
+      ".config/alacritty" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/alacritty";
+      };
+
+      ".config/darwin" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/darwin";
+      };
+
+      ".config/just" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/just";
+      };
+
+      ".config/nvim" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/nvim";
       };
 
       ".tmux" = {
