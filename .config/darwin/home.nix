@@ -22,7 +22,6 @@
       lua-language-server
       tldr
       sops
-      next-ls
       python3
       colima
       docker-compose
@@ -30,6 +29,12 @@
       just
       neovim
       slides
+      ollama
+      uv
+      tgpt
+      pkg-config
+      next-ls
+      jwt-cli
     ];
     file = {
       ".profile.d" = {
@@ -54,6 +59,10 @@
 
       ".config/nvim" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/nvim";
+      };
+
+      ".config/dnsmasq.conf" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/vasu.adari/.run_commands/.config/dnsmasq.conf";
       };
 
       ".tmux" = {

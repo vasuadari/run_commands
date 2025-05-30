@@ -17,4 +17,4 @@ opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.background = dark
 opt.syntax = 'on'
-g.mix_format_on_save = 1
+-- g.mix_format_on_save = 1

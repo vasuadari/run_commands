@@ -3,5 +3,8 @@ alias s:= switch
 switch:
   nix run nix-darwin -- switch --flake ~/.run_commands/.config/darwin# 
 
-flake:
+nflake:
   nvim ~/.run_commands/.config/darwin/flake.nix
+
+nhome:
+  nvim ~/.run_commands/.config/darwin/home.nix

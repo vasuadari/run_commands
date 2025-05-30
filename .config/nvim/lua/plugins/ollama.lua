@@ -4,6 +4,6 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	opts = {
-		model = "llama3.2",
+		model = "gemma3:4b",
 	},
 }

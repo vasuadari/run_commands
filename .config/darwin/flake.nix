@@ -24,7 +24,7 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, darwin, nix-homebrew, homebrew-core, homebrew-cask, ... }:
   let
-    machine = "SB-324";
+    machine = "SB-392";
     system = "aarch64-darwin";
     username = "vasu.adari";
     nixpkgsConfig = { config.allowUnfree = true; };
@@ -82,6 +82,9 @@
             "openvpn"
             "rsc_2fa"
             "zoxide"
+            "helm"
+            "bore-cli"
+            "mise"
           ];
 
           homebrew.casks = [
@@ -98,6 +101,8 @@
             "tailscale"
             "firefox"
             "notion"
+            "zed"
+            "cursor"
           ];
         }
 
