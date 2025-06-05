@@ -23,18 +23,17 @@
       tldr
       sops
       python3
-      colima
       docker-compose
-      docker
       just
       neovim
       slides
-      ollama
       uv
       tgpt
       pkg-config
       next-ls
       jwt-cli
+      shell-gpt
+      nodejs
     ];
     file = {
       ".profile.d" = {

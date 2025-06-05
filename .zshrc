@@ -52,7 +52,6 @@ setp /opt/homebrew/Cellar/zoxide/0.8.3/bin
 setp /opt/homebrew/Cellar/curl/8.8.0/bin
 setp /opt/homebrew/Cellar/lua-language-server/3.9.3/bin
 setp /opt/homebrew/Cellar/sops/3.9.1/bin
-set /Users/vasu/.asdf/shims
 
 for i in $(ls ~/.profile.d)
 do
@@ -80,3 +79,5 @@ export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+setp /users/vasu.adari/.npm-global/bin
+setp /Users/vasu.adari/.local/bin

@@ -24,7 +24,7 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, darwin, nix-homebrew, homebrew-core, homebrew-cask, ... }:
   let
-    machine = "SB-392";
+    machine = "SB-243";
     system = "aarch64-darwin";
     username = "vasu.adari";
     nixpkgsConfig = { config.allowUnfree = true; };
@@ -103,6 +103,7 @@
             "notion"
             "zed"
             "cursor"
+            "craft"
           ];
         }
 

@@ -1,7 +1,7 @@
 alias s:= switch
 
 switch:
-  nix run nix-darwin -- switch --flake ~/.run_commands/.config/darwin# 
+  sudo nix run nix-darwin -- switch --flake ~/.run_commands/.config/darwin# 
 
 nflake:
   nvim ~/.run_commands/.config/darwin/flake.nix

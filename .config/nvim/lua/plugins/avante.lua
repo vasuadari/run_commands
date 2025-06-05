@@ -4,17 +4,19 @@ return {
   version = false, -- Never set this value to "*"! Never!
   opts = {
     provider = "gemini",
-    gemini = {
-      model = "gemini-2.5-pro-preview-05-06", -- your desired model (or use gpt-4o, etc.)
-      temperature = 0,
-      max_tokens = 4096, -- Increase this to include reasoning tokens (for reasoning models)
-      --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+    providers = {
+      gemini = {
+        model = "gemini-2.5-pro-preview-05-06", -- your desired model (or use gpt-4o, etc.)
+        temperature = 0,
+        max_tokens = 4096, -- Increase this to include reasoning tokens (for reasoning models)
+        --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+      }
     },
     rag_service = {
-      enabled = false,
-      host_mount = os.getenv("HOME"),
+      enabled = true,
+      host_mount = os.getenv("HOME") .. "/Scripbox/code/apps",
       provider = "gemini",
-      llm_model = "gemini-2.0-flash"
+      llm_model = "gemini-2.5-pro-preview-05-06"
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
